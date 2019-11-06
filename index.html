@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,112 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/046a8e7919.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>Maggy</title>
 </head>
+
 <body>
     <header>
-        Hello!
+        <div class="row no-gutters">
+            <!-- no gutters removes the padding (removes white space in this case)-->
+            <a href="index.html" class="col-md-4 logo">
+                <!--refer back to index.html because our logo should bring us to our homepage. The logo class is that so we can style it in css. Col-md-4 and 8 partition the screen.-->
+
+            </a>
+            <div class="col-md-8">
+                <div class="row no-gutters bg-color-name-title">
+                    <!--background color-->
+                    <div class="col heading">
+                        <h1 class="name">Maggy</h1>
+                        <h2 class="title">Full Stack Developer</h2>
+
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col">
+                        <ul id="nav" class="list-inline menucontainer">
+                            <!--stops a list from displaying vertically and displays it horizontally instead. Supplied by bootstrap-->
+                            <li class="col-6 col-sm-3 ui-menu-color-home list-inline-item menuitem">
+                                <a href="#" class="hvr-sweep-to-bottom"><i class="fas fa-home" aria-hidden="true"></i><span>Home</span></a>
+                                <!--Inside the anchor tag, there's also a <span> because it's gonna be targeted later using both Font Awesome and hover.css. Aria-hidden means ignored by screen readers-->
+                            </li>
+                            <li class="col-6 col-sm-3 ui-menu-color-resume list-inline-item menuitem">
+                                <a href="#" class="hvr-sweep-to-bottom"><i class="far fa-file" aria-hidden="true"></i><span>Resume</span></a>
+                            </li>
+                            <li class="col-6 col-sm-3 ui-menu-color-contact list-inline-item menuitem">
+                                <a href="#" class="hvr-sweep-to-bottom"><i class="fas fa-address-book" aria-hidden="true"></i><span>Contact</span></a>
+                            </li>
+                            <li class="col-6 col-sm-3 ui-menu-color-download list-inline-item menuitem">
+                                <a href="#" class="hvr-sweep-to-bottom"><i class="fas fa-file-download" aria-hidden="true"></i><span>Download</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    <section></section>
-    <footer></footer>
+    <section class="container-fluid">
+        <div class="row row-table">
+            <!--again start off with adding a bootstrap row. The latter class will be filled out in css. Then inside the row, ALWAYS column as direct child. Size 8 is two thirds of the width of the screen.-->
+            <div class="col-md-8 bg-color-three-reasons section-column">
+                <!--The row-table class will specify the use of a table whereas section-column will specify the use of a table cell, which will give us evenly sized columns in terms of height.-->
+                <div class="row">
+                    <div class="col">
+                        <h3 class="section-heading uppercase">About Me</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <footer class="container-fluid">
+        <!--container fluid so that it is a full width flexible container. Here again rule of thirds (three sections)-->
+        <div id="footer-details" class="row">
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">About</h5>
+                <p class="inline-block">
+                    Full Stack Web Developer. Skilled in everything, from HTML to Heroku. The capacity for structural and design thinking.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">Download</h5>
+                <p class="inline-block">
+                    Need a printable version of my CV? Download it here.
+                    <a href="#" target="_blank" class="cv-pdf">
+                        <i class="fas fa-file-download" aria-hidden="true"></i>
+                        <span class="sr-only">Download link.</span>
+                        <!--sr only is screenreaders only, so it won't be displayed on a regular screen-->
+                    </a>
+                    <!--target = blank so that the download will open in a new tab, instead of losing the current page-->
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">Social</h5>
+                <ul class="list-inline social-links">
+                    <!--the unordered list has the bootstrap default list inline class, which means that every list item has to have this same class also-->
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            <span class="sr-only">Linkedin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

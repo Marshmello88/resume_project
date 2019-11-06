@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+/* -------------------------COLOURS----------------------------*/
+
+.bg-color-name-title {
+    background-color: #676767;
+}
+
+.bg-color-three-reasons {
+   background-color: #fff; 
+}
+
+.ui-menu-color-home {
+    background-color: #e67e22;
+}
+
+.ui-menu-color-resume {
+    background-color: #9b59b6;
+}
+
+.ui-menu-color-contact {
+    background-color: #3498db;
+}
+
+.ui-menu-color-download {
+    background-color: #525252;
+}
+
+/*---------------------------Special padding/margin/text----------------------*/
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.general-sub {
+    font-family:"Exo", sans-serif;
+    font-weight: 300;
+    color: #fafafa;
+}
+
+.inline-block {
+    display: inline-block;
+    /*allows for nice spacing of our content across the footer*/
+}
+
+.row-table {
+    display: table;
+    /*By doing this, we can then specify its child columns as table cells which ensures that the columns will remain equal height, regardless of their content.*/
+}
+
+.section-column {
+    display: table-cell;
+    padding: 0 30px 30px;
+    float: none;
+}
+
+.section-heading {
+    font-family:"Exo", sans-serif;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+/* -------------------------HEADING-------------------------------------------*/
+
+header {
+    margin: 0;
+}
+
+.heading {
+    margin-left: 50px;
+    /*it is hugging the left hand side too much so margin set to 50 px */
+}
+
+.logo {
+    background: url("../images/cat.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background size should cover the container it's sitting inside */
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    /*copied three times to add browser prefixes so it works on all browsers*/
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.name {
+    font-family: "Exo", sans-serif;
+    font-weight: 100;
+    font-size: 46px;
+    margin-top: 50px;
+    color: #ffffff;
+}
+
+.title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    color: #ffffff;
+}
+
+.list-inline-item:not(:last-child) {
+    /*in dev tools this was creating the margin, so you copy and then override in your own css */
+    margin: 0;
+}
+
+.menucontainer {
+    /*css hack to close up space between the nav items. Because it then applies to all list items you have to override it with nav ID */
+    font-size: 0;
+}
+
+#nav {
+    margin: 0;
+    /*margin 0 so the nav bar aligns with the image*/
+}
+
+#nav li {
+    /* all the children li's are targeted here to override the 0 font size */
+    font-size: 14px;
+    padding: 0;
+}
+
+.menuitem {
+    /*menuitem class will arrange the text and icons in a more visually pleasing way*/
+    height: 120px;
+    /*one third of the overall height. rule of thirds.*/
+    text-align: center;
+    padding: 0;
+}
+
+.menuitem a {
+    /*here the anchor child is targeted*/
+    width: 100%;
+    /*the goal is to make the entire area of the div clickable, hence 100% */
+    text-decoration: none;
+    /*removes the link underscore*/
+    color: #fff;
+    height: 120px;
+}
+
+.menuitem a i {
+    /*targets the icon*/
+    padding-top: 22px;
+    display: block;
+    /*block display so that the icon appears on a line of its own*/
+    color: #fafafa;
+    font-size: 26px;
+}
+
+.menuitem span {
+    display: block;
+    width: 100%;
+    /*full width of parent div*/
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/*----------------------------------------------Hover.css-----------------------*/
+
+.hvr-sweep-to-bottom:before {
+    /*copied from the google dev tools, hence the "before". Need to overwrite the sweep color so that's why it needs styling.*/
+    background: rgba(0, 0, 0, 0.2);
+    height: 120px;
+    /* height the same as entire menu item */
+}
+
+/* -------------------------FOOTER-------------------------------------------*/
+
+footer {
+    background-color: #525252;
+    color: #fafafa;
+    min-height: 120px;
+    /*So it can grow beyond 120px if for some reason the about us text extends or pushes beyond that*/
+    margin: 0;
+}
+
+.cv-pdf i {
+    /* targeting the font awesome icon. Icon is smaller than the one in the header because it is auxiliary content*/
+    font-size: 18px;
+    color: #fafafa;
+    text-align: center;
+    padding: 5px;
+    /*To make it so that when we hover over the icon, it changes to a dark orange color, we need to apply a transition. The reason it goes here, rather than in the hover pseudo-element is because you always want to put the transitions in the parent element, rather than the hovered.*/
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.cv-pdf i:hover {
+    color: #e84610;
+}
+
+.social-links {
+    padding-bottom: 15px;
+}
+
+.social-links li a i {
+    /*To adjust the font awesome icons, you go to social-links li a i.*/
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    /*The reason for this is that if you set the border-radius to 50% when something has equal height and width, then you get a circle. And we want the icons displayed in a circle.*/
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+     -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #e84610;
+}
+
+#footer-details {
+    padding: 20px;
+    /*This pushes in the content a little bit (creating certical or negative space) so it doesn't hug the top of the footer.*/
+}
