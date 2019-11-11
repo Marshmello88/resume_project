@@ -54,13 +54,125 @@
         </div>
     </header>
     <section class="container-fluid">
-        <div class="row row-table">
+        <div class="row">
+            <div class="col-md-4 bg-color-personal-info section-column">
+                <!--col-md-4 will take up one third of the width.-->
+                <div class="row">
+                    <div class="col-12">
+                        <!--column with the width of 12 means it will be full width on all screen sizes-->
+                        <h3 class="section-heading uppercase">
+                            Personal Info
+                        </h3>
+                    </div>
+                </div>
+                <div class="personal-info-item">
+                    <div class="key">
+                        <p class="uppercase">
+                            Name:
+                        </p>
+                    </div>
+                    <div class="value">
+                        <p>
+                            Maggy
+                        </p>
+                    </div>
+                </div>
+                <div class="personal-info-item">
+                    <div class="key">
+                        <p class="uppercase">
+                            Address:
+                        </p>
+                    </div>
+                    <div class="value">
+                        <p>
+                            2034LP Haarlem, NL
+                        </p>
+                    </div>
+                </div>
+                <div class="personal-info-item">
+                    <div class="key">
+                        <p class="uppercase">
+                            Phone:
+                        </p>
+                    </div>
+                    <div class="value">
+                        <p>
+                            0624159080
+                        </p>
+                    </div>
+                </div>
+                <div class="personal-info-item">
+                    <div class="key">
+                        <p class="uppercase">
+                            Email:
+                        </p>
+                    </div>
+                    <div class="value">
+                        <p>
+                            m.neibauere@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
             <!--again start off with adding a bootstrap row. The latter class will be filled out in css. Then inside the row, ALWAYS column as direct child. Size 8 is two thirds of the width of the screen.-->
             <div class="col-md-8 bg-color-three-reasons section-column">
                 <!--The row-table class will specify the use of a table whereas section-column will specify the use of a table cell, which will give us evenly sized columns in terms of height.-->
                 <div class="row">
                     <div class="col">
                         <h3 class="section-heading uppercase">About Me</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--Adding a new row just underneath the closing <div> tag of the row that contains the header. This will contain the section "three reasons to hire"-->
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <!--When looked at on the mobile, this is going to be 10 columns wide with an offset of 1 so that we get the content centered and have a one column margin down the left side. We're going to switch that offset off for tablets and larger because on the tablet, we want it to appear in three columns of content. On a desktop we want it to appear in two columns.-->
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="three-reasons-icon fa fa-question" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <!--in our <div>, our Bootstrap specification for our icon was too wide, which leaves us with 10 columns for our header and the text.-->
+                                <h4 class="three-reasons-heading uppercase">What do I do?</h4>
+                                <p>
+                                    I'm a skilled full stack developer with a wealth of diverse life and technical experience that I bring to every project.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <!--When looked at on the mobile, this is going to be 10 columns wide with an offset of 1 so that we get the content centered and have a one column margin down the left side. We're going to switch that offset off for tablets and larger because on the tablet, we want it to appear in three columns of content. On a desktop we want it to appear in two columns.-->
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="three-reasons-icon fa fa-thumbs-up" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <!--in our <div>, our Bootstrap specification for our icon was too wide, which leaves us with 10 columns for our header and the text.-->
+                                <h4 class="three-reasons-heading uppercase">How do I do it?</h4>
+                                <!--Nesting Bootstrap rows inside Bootstrap columns this way can achieve very flexible layouts.-->
+                                <p>
+                                    I follow form as well as function. I know that the aesthetics of effective 
+                                    design combined with application speed, security and reliability combine to
+                                    create a great user experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <!--When looked at on the mobile, this is going to be 10 columns wide with an offset of 1 so that we get the content centered and have a one column margin down the left side. We're going to switch that offset off for tablets and larger because on the tablet, we want it to appear in three columns of content. On a desktop we want it to appear in two columns.-->
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="three-reasons-icon fa fa-bolt" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <!--in our <div>, our Bootstrap specification for our icon was too wide, which leaves us with 10 columns for our header and the text.-->
+                                <h4 class="three-reasons-heading uppercase">Why hire me?</h4>
+                                <p>
+                                    I work quickly and effectively in getting things built and working across the stack. I'm an excellent
+                                    communicator who thrives in bright and enthusiastic teams and
+                                    I'm also a self starter when working solo.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

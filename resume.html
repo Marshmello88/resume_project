@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/046a8e7919.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <title>Maggy</title>
+</head>
+
+<body>
+    <header>
+        <div class="row no-gutters">
+            <!-- no gutters removes the padding (removes white space in this case)-->
+            <a href="index.html" class="col-md-4 logo">
+                <!--refer back to index.html because our logo should bring us to our homepage. The logo class is that so we can style it in css. Col-md-4 and 8 partition the screen.-->
+
+            </a>
+            <div class="col-md-8">
+                <div class="row no-gutters bg-color-name-title">
+                    <!--background color-->
+                    <div class="col heading">
+                        <h1 class="name">Maggy</h1>
+                        <h2 class="title">Full Stack Developer</h2>
+
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col">
+                        <ul id="nav" class="list-inline menucontainer">
+                            <!--stops a list from displaying vertically and displays it horizontally instead. Supplied by bootstrap-->
+                            <li class="col-6 col-sm-3 ui-menu-color-home list-inline-item menuitem">
+                                <a href="#" class="hvr-sweep-to-bottom"><i class="fas fa-home" aria-hidden="true"></i><span>Home</span></a>
+                                <!--Inside the anchor tag, there's also a <span> because it's gonna be targeted later using both Font Awesome and hover.css. Aria-hidden means ignored by screen readers-->
+                            </li>
+                            <li class="col-6 col-sm-3 ui-menu-color-resume list-inline-item menuitem">
+                                <a href="#" class="hvr-sweep-to-bottom"><i class="far fa-file" aria-hidden="true"></i><span>Resume</span></a>
+                            </li>
+                            <li class="col-6 col-sm-3 ui-menu-color-contact list-inline-item menuitem">
+                                <a href="#" class="hvr-sweep-to-bottom"><i class="fas fa-address-book" aria-hidden="true"></i><span>Contact</span></a>
+                            </li>
+                            <li class="col-6 col-sm-3 ui-menu-color-download list-inline-item menuitem">
+                                <a href="#" class="hvr-sweep-to-bottom"><i class="fas fa-file-download" aria-hidden="true"></i><span>Download</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 bg-color-work-history section-column">
+                <!--col-md-4 will take up one third of the width.-->
+                <div class="row">
+                    <div class="col-12">
+                        <!--column with the width of 12 means it will be full width on all screen sizes-->
+                        <h3 class="history-heading uppercase">
+                            Work History
+                        </h3>
+                    </div>
+                </div>
+                <div class="history-items">
+                <div class="timeline-item" data-dates="02/1998 - 04/2004">
+                    <h4> National College of Art and Design (NCAD)</h4>
+                    <p>Sculptor in residence</p>
+                </div>
+                <div class="timeline-item" data-dates="04/2004 - 06/2008">
+                    <h4>Deutsche Bank Amsterdam</h4>
+                    <p>Senior KYC Operator</p>
+                </div>
+                <div class="timeline-item" data-dates="06/2008 - 06/2011">
+                    <h4>Phantom Design Inc. Dublin</h4>
+                    <p>Junior Front End Developer</p>
+                </div>
+                <div class="timeline-item" data-dates="06/2011 - Present">
+                    <h4>Hooli Inc. Silicon Valley</h4>
+                    <p>Full Stack Web Developer</p>
+                </div>
+                </div>
+            </div>
+            <!--again start off with adding a bootstrap row. The latter class will be filled out in css. Then inside the row, ALWAYS column as direct child. Size 8 is two thirds of the width of the screen.-->
+            <div class="col-md-8 bg-color-three-reasons section-column">
+                <!--The row-table class will specify the use of a table whereas section-column will specify the use of a table cell, which will give us evenly sized columns in terms of height.-->
+                <div class="row">
+                    <div class="col">
+                        <h3 class="section-heading uppercase">My Skills</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--Adding a new row just underneath the closing <div> tag of the row that contains the header. This will contain the section "three reasons to hire"-->
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <!--When looked at on the mobile, this is going to be 10 columns wide with an offset of 1 so that we get the content centered and have a one column margin down the left side. We're going to switch that offset off for tablets and larger because on the tablet, we want it to appear in three columns of content. On a desktop we want it to appear in two columns.-->
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="three-reasons-icon fa fa-tv" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <!--in our <div>, our Bootstrap specification for our icon was too wide, which leaves us with 10 columns for our header and the text.-->
+                                <h4 class="three-reasons-heading uppercase">Front End</h4>
+                                <p>
+                                    I'm skilled in User Experience Design using the trinity of HTML/CSS/Javascript. I also have extensive experience in Front End Frameworks such as Angular and React
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <!--When looked at on the mobile, this is going to be 10 columns wide with an offset of 1 so that we get the content centered and have a one column margin down the left side. We're going to switch that offset off for tablets and larger because on the tablet, we want it to appear in three columns of content. On a desktop we want it to appear in two columns.-->
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="three-reasons-icon fa fa-gears" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <!--in our <div>, our Bootstrap specification for our icon was too wide, which leaves us with 10 columns for our header and the text.-->
+                                <h4 class="three-reasons-heading uppercase">Back End</h4>
+                                <!--Nesting Bootstrap rows inside Bootstrap columns this way can achieve very flexible layouts.-->
+                                <p>
+                                    I specialize in data-driven web applications. Many of my projects utilise document-based data. I use Python and Django in conjunction with MongoDB to process and present information.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row progress-section">
+                    <div class="col">
+                        <div class="progress">
+                            <!--progress class acts as a wrapper for the progress bar and its content in Bootstrap-->
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;">
+                                <!--the valuebar represents the current value of the progress bar. Valuemin and valuemax sets the range.-->
+                                <span class="sr-only">90% complete</span>
+                            </div>
+                            <span class="progress-type">HTML / HTML5</span>
+                        </div>
+                        <div class="progress">
+                            <!--progress class acts as a wrapper for the progress bar and its content in Bootstrap-->
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                <span class="sr-only">80% complete</span>
+                            </div>
+                            <span class="progress-type">CSS / CSS3</span>
+                        </div>
+                        <div class="progress">
+                            <!--progress class acts as a wrapper for the progress bar and its content in Bootstrap-->
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%;">
+                                <span class="sr-only">70% complete</span>
+                            </div>
+                            <span class="progress-type">JavaScript / jQuery</span>
+                        </div>
+                        <div class="progress">
+                            <!--progress class acts as a wrapper for the progress bar and its content in Bootstrap-->
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                <span class="sr-only">80% complete</span>
+                            </div>
+                            <span class="progress-type">Django / Python</span>
+                        </div>
+                        <div class="progress">
+                            <!--progress class acts as a wrapper for the progress bar and its content in Bootstrap-->
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                <span class="sr-only">80% complete</span>
+                            </div>
+                            <span class="progress-type">SQL / NoSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="container-fluid">
+        <!--container fluid so that it is a full width flexible container. Here again rule of thirds (three sections)-->
+        <div id="footer-details" class="row">
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">About</h5>
+                <p class="inline-block">
+                    Full Stack Web Developer. Skilled in everything, from HTML to Heroku. The capacity for structural and design thinking.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">Download</h5>
+                <p class="inline-block">
+                    Need a printable version of my CV? Download it here.
+                    <a href="#" target="_blank" class="cv-pdf">
+                        <i class="fas fa-file-download" aria-hidden="true"></i>
+                        <span class="sr-only">Download link.</span>
+                        <!--sr only is screenreaders only, so it won't be displayed on a regular screen-->
+                    </a>
+                    <!--target = blank so that the download will open in a new tab, instead of losing the current page-->
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">Social</h5>
+                <ul class="list-inline social-links">
+                    <!--the unordered list has the bootstrap default list inline class, which means that every list item has to have this same class also-->
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            <span class="sr-only">Linkedin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
