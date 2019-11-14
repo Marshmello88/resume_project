@@ -7,7 +7,7 @@
 }
 
 .bg-color-three-reasons {
-   background-color: #fff; 
+    background-color: #fff;
 }
 
 .bg-color-personal-info {
@@ -16,6 +16,10 @@
 
 .bg-color-work-history {
     background-color: #9b59b6
+}
+
+.bg-color-contact {
+    background-color: #fff;
 }
 
 .ui-menu-color-home {
@@ -48,7 +52,7 @@ h4 {
 }
 
 .general-sub {
-    font-family:"Exo", sans-serif;
+    font-family: "Exo", sans-serif;
     font-weight: 300;
     color: #fafafa;
 }
@@ -71,7 +75,7 @@ h4 {
 
 .history-heading,
 .section-heading {
-    font-family:"Exo", sans-serif;
+    font-family: "Exo", sans-serif;
     font-weight: 300;
     margin-top: 25px;
     margin-bottom: 40px;
@@ -229,7 +233,7 @@ footer {
     text-align: center;
     color: #fafafa;
     background: #8f8f8f;
-     -moz-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
 }
@@ -273,7 +277,7 @@ footer {
 }
 
 .personal-info-item .key p,
-.personal-info-item .value p { 
+.personal-info-item .value p {
     margin: 0;
 }
 
@@ -376,4 +380,39 @@ footer {
 .history-items {
     margin-bottom: 30px;
     /* This is just to make sure that the spacing is always there, even if we view it on a tablet*/
+}
+
+/* -----------------------------------------Contact form----------------------------*/
+
+.contact-heading {
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.center-form {
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #fafafa;
+    background-color: #e84610;
+}
+
+/* ---------------------------------------------Media Queries----------------------------*/
+
+/*Our media query is only going to take effect when the width of the screen is 992px or greater. So I'm going to set @media(min-width) to 992px. So when our screen size is wider than 992px. This way the form will appear narrower on desktop and be 70% on mobile*/
+
+@media(min-width: 992px) {
+    .center-form {
+        padding-top: 30px;
+        min-height: 240px;
+        margin: 0 auto;
+        max-width: 50%;
+    }
 }
