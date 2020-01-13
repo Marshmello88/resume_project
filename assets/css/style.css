@@ -2,6 +2,15 @@
 
 /* -------------------------COLOURS----------------------------*/
 
+
+.ui-menu-color-github {
+    background-color: #1c4a6c;
+}
+
+.ui-menu-color-interests {
+    background-color: #e74c3c;
+}
+
 .bg-color-name-title {
     background-color: #676767;
 }
@@ -192,6 +201,8 @@ header {
 }
 
 /* -------------------------FOOTER-------------------------------------------*/
+
+
 
 footer {
     background-color: #525252;
@@ -416,3 +427,7 @@ button[type="submit"] {
         max-width: 50%;
     }
 }
+
+
+/*------------------------- MAP -------------------- */
+#map {min-height: 360px;}
